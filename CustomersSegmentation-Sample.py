@@ -24,16 +24,18 @@ import warnings
 warnings.filterwarnings('ignore')
 df=pd.read_csv("/content/Mall_Customers.csv")
 df.head()
-CustomerID	Gender	Age	Annual Income (k$)	Spending Score (1-100)
-0	1	Male	19	15	39
-1	2	Male	21	15	81
-2	3	Female	20	16	6
-3	4	Female	23	16	77
-4	5	Female	31	17	40
+CustomerID	Gender	 Age	Annual Income (k$)	Spending Score (1-100)
+01          Male	  19	  15	     39
+12         	Male	  21   15	     81
+23	         Female	20	  16	     6
+34	         Female	23	  16	     77
+45	         Female	31  	17     	40
+
 df.shape
 (200, 5)
 df.describe()
 CustomerID	Age	Annual Income (k$)	Spending Score (1-100)
+
 count	200.000000	200.000000	200.000000	200.000000
 mean	100.500000	38.850000	60.560000	50.200000
 std	57.879185	13.969007	26.264721	25.823522
@@ -53,19 +55,22 @@ Data columns (total 5 columns):
  2   Age                     200 non-null    int64 
  3   Annual Income (k$)      200 non-null    int64 
  4   Spending Score (1-100)  200 non-null    int64 
+
 dtypes: int64(4), object(1)
 memory usage: 7.9+ KB
 df['Gender'].describe()
+
 count        200
 unique         2
 top       Female
 freq         112
+
 Name: Gender, dtype: object
 plt.figure(figsize=(8,7))
 sns.countplot(df["Gender"])
 plt.xlabel("Gender",fontsize = 15)
 plt.show()
-
+.........
 plt.figure(figsize=(10,8))
 sns.distplot(df["Age"],color = "Green")
 plt.xlabel("Age",fontsize = 15)
