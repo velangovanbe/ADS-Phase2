@@ -24,12 +24,12 @@ import warnings
 warnings.filterwarnings('ignore')
 df=pd.read_csv("/content/Mall_Customers.csv")
 df.head()
-CustomerID	Gender	 Age	Annual Income (k$)	Spending Score (1-100)
-01          Male	  19	  15	     39
-12         	Male	  21   15	     81
-23	         Female	20	  16	     6
-34	         Female	23	  16	     77
-45	         Female	31  	17     	40
+  CustomerID	Gender	 Age	Annual Income (k$)	Spending Score (1-100)
+0  1          Male	  19	  15	     39
+1  2         	Male	  21   15	     81
+2  3	         Female	20	  16	     6
+3  4	         Female	23	  16	     77
+4  5	         Female	31  	17     	40
 
 df.shape
 (200, 5)
